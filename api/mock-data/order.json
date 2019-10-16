@@ -3,7 +3,8 @@
   "orders": [
     {
       "meat": "Curry Goat",
-      "sides": ["Rice and Peas", "Pasta"],
+      "carbs": "Rice and Peas",
+      "side": "Pasta",
       "other": "Ketchup and stuff"
     }
   ]
