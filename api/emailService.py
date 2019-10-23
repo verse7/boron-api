@@ -100,6 +100,8 @@ class EmailService:
         return self.service.users().labels().list(userId=self.userId).execute()['labels']
 
 
+emailService = EmailService()
+
 if __name__ == "__main__":
     eService = EmailService()
     emails = eService.emails()
