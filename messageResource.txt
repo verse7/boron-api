@@ -1,0 +1,138 @@
+{"historyId": "1526",
+ "id": "16dd6e3dea880740",
+ "internalDate": "1571268307000",
+ "labelIds": ["UNREAD", "CATEGORY_PERSONAL", "INBOX"],
+ "payload": {"body": {"size": 0},
+             "filename": "",
+             "headers": [{"name": "Delivered-To",
+                          "value": "for.our.welfare.uwi@gmail.com"},
+                         {"name": "Received",
+                          "value": "by 2002:a17:906:34d6:0:0:0:0 with SMTP id "
+                                   "h22csp204671ejb;        Wed, 16 Oct 2019 "
+                                   "16:25:21 -0700 (PDT)"},
+                         {"name": "X-Received",
+                          "value": "by 2002:a63:a1d:: with SMTP id "
+                                   "29mr753013pgk.218.1571268321203;        "
+                                   "Wed, 16 Oct 2019 16:25:21 -0700 (PDT)"},
+                         {"name": "ARC-Seal",
+                          "value": "i=1; a=rsa-sha256; t=1571268321; "
+                                   "cv=none;        d=google.com; "
+                                   "s=arc-20160816;        "
+                                   "b=qCBC4W6WeitGd2toVpvY0YJI1pfMmO4zCK5U4LkmoAHboWRtE7+bit66e0XZen8DGB         "
+                                   "xyb30ayNHDkgLMl8KhpFt0JXELpXROBFdnHTOW/DrscJyWXwZZu3oBPmIm4x87Zi9xno         "
+                                   "wfffVJiaD5dpHD7xxEBtkZW5EUPIkhN7lex9XCE6bKVqer5V06CuX7UHheFJ7xj9n9Lu         "
+                                   "M/FBOuT5VOTAWeOYXrkMpLJZ0d9ArC8ncnq980K0gzEde4+AaWkYBXk/kwhqN5H3M5Iw         "
+                                   "3gmNTN/FgeMSZPvXe8SAV+q9CTFHfOlDu8S9Y6OGMEauJFfM/n6bct5bea7hOfIYuTeq         "
+                                   "A1LQ=="},
+                         {"name": "ARC-Message-Signature",
+                          "value": "i=1; a=rsa-sha256; c=relaxed/relaxed; "
+                                   "d=google.com; s=arc-20160816;        "
+                                   "h=to:subject:message-id:date:from:mime-version:dkim-signature;        "
+                                   "bh=zKs3YFJZiehr5GOaY1NzJk2Ls0MK+gUx/35wevitlrM=;        "
+                                   "b=OfWO8JEad3gZiBChD4odLRIsOfkedvr+0KSjq++/w8sSpLP390EyoaEMkPoe6r9Y4M         "
+                                   "bodf2QxSRo4s2ITF772PwOljP1IJMa4XJpvP91yA7sskBfWKz1PlgpApYbFtD8VHsOp/         "
+                                   "mXzEJZ+Mfs7766T7RiMx4Zyoh0Q7AZJg7dJ+arKIH1TOqIyWtm3AJyeiJo8LILxNoowF         "
+                                   "IpZFjk7uBwfvFyOOMtPCmfG5bKMMVTohAYzJGD5EuGuUCG8HVzbXG4Q/p7QTvpPJ2/YF         "
+                                   "5LXkZOGuh8FqNwhSAEHljgoWye3cONQQlMvRfUrIeCbZ2mSBnqtKkUkfmR54v+Ky2oWV         "
+                                   "DDqQ=="},
+                         {"name": "ARC-Authentication-Results",
+                          "value": "i=1; mx.google.com;       dkim=pass "
+                                   "header.i=@gmail.com header.s=20161025 "
+                                   "header.b=Bx6JOMKn;       spf=pass "
+                                   "(google.com: domain of "
+                                   "rowaneatkinson@gmail.com designates "
+                                   "209.85.220.41 as permitted sender) "
+                                   "smtp.mailfrom=rowaneatkinson@gmail.com;       "
+                                   "dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) "
+                                   "header.from=gmail.com"},
+                         {"name": "Return-Path",
+                          "value": "<rowaneatkinson@gmail.com>"},
+                         {"name": "Received",
+                          "value": "from mail-sor-f41.google.com "
+                                   "(mail-sor-f41.google.com. "
+                                   "[209.85.220.41])        by mx.google.com "
+                                   "with SMTPS id "
+                                   "n8sor499710plk.36.2019.10.16.16.25.20        "
+                                   "for <for.our.welfare.uwi@gmail.com>        "
+                                   "(Google Transport Security);        Wed, "
+                                   "16 Oct 2019 16:25:21 -0700 (PDT)"},
+                         {"name": "Received-SPF",
+                          "value": "pass (google.com: domain of "
+                                   "rowaneatkinson@gmail.com designates "
+                                   "209.85.220.41 as permitted sender) "
+                                   "client-ip=209.85.220.41;"},
+                         {"name": "Authentication-Results",
+                          "value": "mx.google.com;       dkim=pass "
+                                   "header.i=@gmail.com header.s=20161025 "
+                                   "header.b=Bx6JOMKn;       spf=pass "
+                                   "(google.com: domain of "
+                                   "rowaneatkinson@gmail.com designates "
+                                   "209.85.220.41 as permitted sender) "
+                                   "smtp.mailfrom=rowaneatkinson@gmail.com;       "
+                                   "dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) "
+                                   "header.from=gmail.com"},
+                         {"name": "DKIM-Signature",
+                          "value": "v=1; a=rsa-sha256; "
+                                   "c=relaxed/relaxed;        d=gmail.com; "
+                                   "s=20161025;        "
+                                   "h=mime-version:from:date:message-id:subject:to;        "
+                                   "bh=zKs3YFJZiehr5GOaY1NzJk2Ls0MK+gUx/35wevitlrM=;        "
+                                   "b=Bx6JOMKn4hni4y3D+8zdhfLG2UuwY/wUxzOMEZ/B60SdefpimrZ1FNsxdsMgWqabOu         "
+                                   "tKv8K7F9OB8fMr2XNiWh9gm8TfXf9n829WyjU4Trzd/MD9H9Ic5+23Py0udrGlwPeMJX         "
+                                   "4m3NBgAJToGbVIUA8QCWSkXMvL5aLEQ0ThBy+25wt/s9pPpPWLc04R5TZ70lirPU1Rs3         "
+                                   "RJTSjHM4OSzzBQX8i++pL6fnahQw/LFPTwDOYuqj+VBbB2+Q+M+s5HedVsBmrQdI0STd         "
+                                   "dZMXHE3IdQqK0uja0qw0pwPBvmPu87r7YO0ofN1LBMqpCj0CvsfClInOJ1Hm4Qu7ViW7         "
+                                   "lJZw=="},
+                         {"name": "X-Google-DKIM-Signature",
+                          "value": "v=1; a=rsa-sha256; "
+                                   "c=relaxed/relaxed;        d=1e100.net; "
+                                   "s=20161025;        "
+                                   "h=x-gm-message-state:mime-version:from:date:message-id:subject:to;        "
+                                   "bh=zKs3YFJZiehr5GOaY1NzJk2Ls0MK+gUx/35wevitlrM=;        "
+                                   "b=oxguhozj6jY3iyzRSg0tW16ikPmx80BdWprqh+Kw76KHDMr6h+ZcG1INzLoCRWHA5c         "
+                                   "4uAPOqIBZA6YSZQNJ0QHQx63nqRi/sBdU4xBUgYtdUhZAYHVuDzoTA3/+VVTt79S3EYc         "
+                                   "TNaCFyv8KJbgAUh6HV86pOedrnEAHPi3HC2IQWzhkAz4RopazXCZ+gInb5BzpPvT9AB5         "
+                                   "sw5slKk5GBrOEpYSh7soxi+QOq7Dpz65z3DyOHIyednyHaENB3hXSjcusINOlIbQKTmF         "
+                                   "zZxx6JSrSRYstL0YJKBxiZwYWOmRk+yRNXBJxThqgivGvYOuSSmr85MH0hgnRUU6Ldrx         "
+                                   "bmKw=="},
+                         {"name": "X-Gm-Message-State",
+                          "value": "APjAAAWZ8NfTj41kwT3mqA00/fab/P/tvD7fyjre3GIB98KVQRWlwzDs "
+                                   "Vf/4U0rY9w+pX12tTlK5totX2I7QCjeXOeccdoa7C9VO"},
+                         {"name": "X-Google-Smtp-Source",
+                          "value": "APXvYqyDXwjg3A3PnIb7cUNMCo1Z/N+HYiS7c1lHOFOpAU6PhPIsn67Fvtn//t+aQJ/mBXtBbPm81X4BPp1DIRumL4k="},
+                         {"name": "X-Received",
+                          "value": "by 2002:a17:902:690c:: with SMTP id "
+                                   "j12mr758970plk.183.1571268320539; Wed, 16 "
+                                   "Oct 2019 16:25:20 -0700 (PDT)"},
+                         {"name": "MIME-Version", "value": "1.0"},
+                         {"name": "From",
+                          "value": "Rowan Atkinson <rowaneatkinson@gmail.com>"},
+                         {"name": "Date",
+                          "value": "Wed, 16 Oct 2019 18:25:07 -0500"},
+                         {"name": "Message-ID",
+                          "value": "<CALuQrADtfe1aRXSNCTCU32pG8QXawsLL6XqqOdiRQw2mteYUKg@mail.gmail.com>"},
+                         {"name": "Subject", "value": "TEST EMAIL"},
+                         {"name": "To",
+                          "value": "for.our.welfare.uwi@gmail.com"},
+                         {"name": "Content-Type",
+                          "value": "multipart/alternative; "
+                                   "boundary="00000000000017ba6a05950f6ad7""}],
+             "mimeType": "multipart/alternative",
+             "partId": "",
+             "parts": [{"body": {"data": "VGhpcyBpcyB0aGUgYm9keSBvZiB0ZXN0IGVtYWlsIDENCg0KSGVsbG8NCg==",
+                                 "size": 43},
+                        "filename": "",
+                        "headers": [{"name": "Content-Type",
+                                     "value": "text/plain; charset="UTF-8""}],
+                        "mimeType": "text/plain",
+                        "partId": "0"},
+                       {"body": {"data": "PGRpdiBkaXI9Imx0ciI-PGRpdj5UaGlzIGlzIHRoZSBib2R5IG9mIHRlc3QgZW1haWwgMTwvZGl2PjxkaXY-PGJyPjwvZGl2PjxkaXY-SGVsbG88YnI-PC9kaXY-PC9kaXY-DQo=",
+                                 "size": 101},
+                        "filename": "",
+                        "headers": [{"name": "Content-Type",
+                                     "value": "text/html; charset="UTF-8""}],
+                        "mimeType": "text/html",
+                        "partId": "1"}]},
+ "sizeEstimate": 4862,
+ "snippet": "This is the body of test email 1 Hello",
+ "threadId": "16dd6e3dea880740"}

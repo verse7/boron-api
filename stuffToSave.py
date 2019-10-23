@@ -1,14 +1,3 @@
-from __future__ import print_function
-import pickle
-import os.path
-from googleapiclient.discovery import build
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-
-# If modifying these scopes, delete the file token.pickle.
-SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
-
-
 def main():
     """Shows basic usage of the Gmail API.
     Lists the user's Gmail labels.
@@ -35,15 +24,29 @@ def main():
     service = build('gmail', 'v1', credentials=creds)
 
     # Call the Gmail API
-    results = service.users().labels().list(userId='me').execute()
-    labels = results.get('labels', [])
+    results = service.users().messages().list(userId='me').execute()
+    messages = results.get('messages', [])
 
-    if not labels:
-        print('No labels found.')
-    else:
-        print('Labels:')
-        for label in labels:
-            print(label['name'])
+    for message in messages:
+        # print(message.get(userId='me', id=message['id']))
+        # print(message.get('me', message['id']))
+        # print(message['id'])
+        # print(message)
+        print("\n\n")
+        pprint(getMessage(service, "me", message['id']))
+        
+
+
+def getMessage(service, uId, mId):
+    raw_msg = service.users().messages().get(userId=uId, id=mId, format="full").execute()
+    pprint(raw_msg)
+    text_data = raw_msg['payload']['parts'][0]['body']['data']
+    # print(text_data)
+    decoded_text = base64.urlsafe_b64decode(text_data)
+    # print(decoded_text)
+    message = email.message_from_bytes(decoded_text)
+    print(message)
+    return message
 
 
 if __name__ == '__main__':
