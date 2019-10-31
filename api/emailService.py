@@ -58,7 +58,7 @@ class EmailService:
         text_data = self.payload(mail)['parts'][0]['body']['data']  # grabs plain text portion of email (base64 bytes)
         decoded_text = base64.urlsafe_b64decode(text_data)  # decodes base 64 byte text
         message = email.message_from_bytes(decoded_text)    # parses text from email in decoded text
-        return message
+        return str(message)
 
     def payload(self, mail):
         return mail['payload']
@@ -99,9 +99,15 @@ class EmailService:
     def labels(self):
         return self.service.users().labels().list(userId=self.userId).execute()['labels']
 
+    def getlatest(self, sender=""):
+        for mail in self.emails():
+            if self.whoFrom(mail) == sender:
+                return mail
+        return None
 
-emailService = EmailService()
 
+eservice = EmailService()
+"""
 if __name__ == "__main__":
     eService = EmailService()
     emails = eService.emails()
@@ -110,3 +116,4 @@ if __name__ == "__main__":
         # print(eService.bodyText(mail))
     for label in eService.labels():
         print(label)
+ """

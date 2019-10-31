@@ -11,6 +11,8 @@ flask = "*"
 google-api-python-client = "*"
 google-auth-httplib2 = "*"
 google-auth-oauthlib = "*"
+flask-sqlalchemy = "*"
+flask-marshmallow = "*"
 
 [requires]
 python_version = "3.7"
