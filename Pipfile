@@ -13,6 +13,8 @@ google-auth-httplib2 = "*"
 google-auth-oauthlib = "*"
 flask-sqlalchemy = "*"
 flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.7"

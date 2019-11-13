@@ -100,10 +100,11 @@ class Menu:
         string += "FOOTER\n" + self.footer + "\n\n"
         return string
 
-    def toJSON(self):
-        return json.dumps(self, default=lambda o: o.__dict__, 
-            sort_keys=True, indent=4)
-        
+    def toJSON(self, mode="simple"):
+        if mode=='simple':
+            return json.dumps({'entrees': self.entrees, 'sides': self.sides}, sort_keys=True, indent=4)
+        else:
+            return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)        
         
 """ 
 if __name__ == "__main__":

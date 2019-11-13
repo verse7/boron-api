@@ -6,8 +6,10 @@ from api import Menu
 def home():
     return {"msg": "hello"}
 
+
 @app.route("/menu/<vendor>", methods=['GET'])
-def menu(vendor):
+@app.route("/menu/<vendor>&<mode>", methods=['GET'])
+def menu(vendor, mode="simple"):
     domain = "@gmail.com"
     menu = Menu(vendor + domain)
-    return menu.toJSON()
+    return menu.toJSON(mode)
