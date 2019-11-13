@@ -7,8 +7,8 @@ class Menu:
     def __init__(self, sender=None):
         self.header = ""    # Anything before the menu title
         self.title = "MENU"  # Title in email menu
-        self.entrees = ""    # Entree list under title
-        self.sides = ""      # Sides following entree lsist
+        self.entrees = []    # Entree list under title
+        self.sides = []      # Sides following entree lsist
         self.footer = ""     # Anything after sides
         self.menu = ""       # Raw menu string
         self.menulist = []   # raw menu body split into lines (mutated during parsing)
@@ -64,7 +64,7 @@ class Menu:
         def getEntrees():
             """ return entrees """
             menuParts = "\n".join(self.menulist).split("\n\n")
-            self.entrees = menuParts[0]            
+            self.entrees = menuParts[0].split("\n")            
             self.menulist = "\n".join(menuParts[1:]).split("\n")
 
         def getSides():
@@ -82,7 +82,7 @@ class Menu:
             for line in self.menulist:
                 matches = re.search("/+", line)
                 if matches:
-                    self.sides += line + "\n"
+                    self.sides += [line]
                 else:
                     self.footer += line + "\n"
                 
