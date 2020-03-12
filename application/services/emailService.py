@@ -4,10 +4,7 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-import base64
-import email
-from apiclient import errors
-from pprint import pprint
+import base64, email
 
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
@@ -19,13 +16,13 @@ class EmailService:
         """ init gmail service object - uses 'me' as user ID by default"""
         self.userId = userId
         creds = None
+       
         # The file token.pickle stores the user's access and refresh tokens, and is
         # created automatically when the authorization flow completes for the first
         # time.
         if os.path.exists('token.pickle'):
             with open('token.pickle', 'rb') as token:
                 creds = pickle.load(token)
-
         # If there are no (valid) credentials available, let the user log in.
         if not creds or not creds.valid:
             if creds and creds.expired and creds.refresh_token:
@@ -37,8 +34,8 @@ class EmailService:
             # Save the credentials for the next run
             with open('token.pickle', 'wb') as token:
                 pickle.dump(creds, token)
-        self.creds = creds
-        self.service = build('gmail', 'v1', credentials=self.creds)
+
+        self.service = build('gmail', 'v1', credentials=creds)
 
     def emailList(self):
         """ get list of emails - list of messages with thread and email IDs (no actual content) """
@@ -105,8 +102,9 @@ class EmailService:
                 return mail
         return None
 
+""" email = EmailService()
+print(email.emailList()) """
 
-eservice = EmailService()
 """
 if __name__ == "__main__":
     eService = EmailService()

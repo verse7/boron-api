@@ -1,8 +1,10 @@
 import re
 import json
-from api.emailService import EmailService
+from application.services.emailService import EmailService
 
-class Menu:
+eservice = EmailService()
+
+class MenuService:
     """ Class representing a menu - can be used to retrieve parts of the menu """
     def __init__(self, sender=None):
         self.header = ""    # Anything before the menu title
